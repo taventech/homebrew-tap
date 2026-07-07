@@ -7,16 +7,16 @@
 class Hedge < Formula
   desc "Hedge broker portal from your terminal: submit risks, check appetite, track quotes"
   homepage "https://github.com/taventech/hedge-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taventech/hedge-cli/releases/download/v0.1.0/hedge-darwin-arm64"
-      sha256 "1be322557e92b8b2198192ec21e896e13bb7652572738453db924cf9b8475faa"
+      url "https://github.com/taventech/hedge-cli/releases/download/v0.2.0/hedge-darwin-arm64"
+      sha256 "ce9bd55e7c9575ad68dfa5a3cc23c59d1e66ca4ac908d55c3e648591980bd7a1"
     else
-      url "https://github.com/taventech/hedge-cli/releases/download/v0.1.0/hedge-darwin-x64"
-      sha256 "092851fcccffe6674579cadb835bdc5b71aac6ca9ac29e184c29daa83e550220"
+      url "https://github.com/taventech/hedge-cli/releases/download/v0.2.0/hedge-darwin-x64"
+      sha256 "6e47d1ce26bc8b4e43759aea22870fce05ce61acb76880b566dc2d4d7f03bafd"
     end
   end
 
@@ -29,6 +29,6 @@ class Hedge < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/hedge --version")
+    assert_match "0.2.0", shell_output("#{bin}/hedge --version")
   end
 end

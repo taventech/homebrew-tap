@@ -7,16 +7,16 @@
 class Bindly < Formula
   desc "Start Bindly intake sessions and submit to Hedge from your terminal"
   homepage "https://github.com/taventech/bindly-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taventech/bindly-cli/releases/download/v0.1.0/bindly-darwin-arm64"
-      sha256 "1025a7815006246abad3685d8371cba3f4137fe28f90eea83fba34972615f823"
+      url "https://github.com/taventech/bindly-cli/releases/download/v0.2.0/bindly-darwin-arm64"
+      sha256 "e1026d87cd875e3754c1080eb5fd184c1023c26727ae24c5e50dc8d7760ed0cb"
     else
-      url "https://github.com/taventech/bindly-cli/releases/download/v0.1.0/bindly-darwin-x64"
-      sha256 "11faf567fff45bdf5608f29e97d9b2393f18553da50f1b14a01f23a0ae8b3e1c"
+      url "https://github.com/taventech/bindly-cli/releases/download/v0.2.0/bindly-darwin-x64"
+      sha256 "37513fc9d02fab590a9bc42e7352a0c8dc5f7a3694e57cb433aec49bdc82d6d2"
     end
   end
 
@@ -29,6 +29,6 @@ class Bindly < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/bindly --version")
+    assert_match "0.2.0", shell_output("#{bin}/bindly --version")
   end
 end
