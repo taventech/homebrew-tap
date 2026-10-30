@@ -5,18 +5,18 @@
 # the new darwin binaries:
 #   shasum -a 256 hedge-darwin-arm64 hedge-darwin-x64
 class Hedge < Formula
-  desc "Hedge broker portal from your terminal: submit risks, check appetite, track quotes"
+  desc "Quote Hedge Instant Quote markets from your terminal: appetite, quotes, bind link"
   homepage "https://github.com/taventech/hedge-cli"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/taventech/hedge-cli/releases/download/v0.4.0/hedge-darwin-arm64"
-      sha256 "37f234396f343bbb0f87e9b64b71aef725a06fefc43cdd08ec9aeaf412b4a0ab"
+      url "https://github.com/taventech/hedge-cli/releases/download/v0.5.0/hedge-darwin-arm64"
+      sha256 "fe47c0e93d3e06e34c8988299857d9875a510cab2790e331b8339e9cfc8bb932"
     else
-      url "https://github.com/taventech/hedge-cli/releases/download/v0.4.0/hedge-darwin-x64"
-      sha256 "00f793989a197da6bfb752ac10d57f411d4e7f4a0daa3b9f04ee2c3a335b08c2"
+      url "https://github.com/taventech/hedge-cli/releases/download/v0.5.0/hedge-darwin-x64"
+      sha256 "ca2a266ce6a52e722e0442592f1d09cacda5df0ca9b7edc083267b31e9cb8865"
     end
   end
 
@@ -29,6 +29,6 @@ class Hedge < Formula
   end
 
   test do
-    assert_match "0.4.0", shell_output("#{bin}/hedge --version")
+    assert_match "0.5.0", shell_output("#{bin}/hedge --version")
   end
 end
